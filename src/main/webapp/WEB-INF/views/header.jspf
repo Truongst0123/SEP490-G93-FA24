@@ -16,8 +16,8 @@
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <!-- Logo -->
         <div>
-            <a href="/" style="text-decoration: none; color: white;">
-                <img src="logo.png" alt="JobFinder Logo" style="height: 50px;">
+            <a href="/home" style="text-decoration: none; color: white;">
+                <img src="/WEB-INF/fragment/logo.png" alt="JobFinder Logo" style="height: 50px;">
             </a>
         </div>
 
@@ -59,7 +59,7 @@
                             tuyển</a>
                         <a href="/settings"
                            style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Cài đặt</a>
-                        <a href="/logout"
+                        <a href="/sign-out"
                            style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Đăng
                             xuất</a>
                     </div>

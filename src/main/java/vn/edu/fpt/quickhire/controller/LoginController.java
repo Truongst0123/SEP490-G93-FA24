@@ -43,6 +43,6 @@ public class LoginController {
     @GetMapping("/sign-out")
     public String logout(HttpSession session) {
         session.removeAttribute("user");
-        return "redirect:/";
+        return "redirect:/home";
     }
 }
