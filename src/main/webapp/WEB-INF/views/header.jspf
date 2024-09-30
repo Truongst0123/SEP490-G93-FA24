@@ -5,5 +5,10 @@
 <c:set var="isGuest" value="${empty user}"/>
 
 <header>
-<c:if test="${isGuest}"> press to login</c:if>
+<c:if test="${empty sessionScope.user}">
+    <a href="/login">Đăng nhập</a>
+</c:if>
+<c:if test="${not empty sessionScope.user}">
+    Welcome <c:out value="${sessionScope.user.username}"/>
+</c:if>
 </header>
