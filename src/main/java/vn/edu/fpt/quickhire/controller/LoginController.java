@@ -20,7 +20,7 @@ public class LoginController {
     // Hiển thị form đăng nhập
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login";
+        return "login/login";
     }
 
     // Xử lý quá trình đăng nhập
@@ -40,7 +40,13 @@ public class LoginController {
         } else {
             // Đăng nhập thất bại
             model.addAttribute("error", "Invalid username or password");
-            return "login";
+            return "login/login";
         }
+    }
+
+    @GetMapping("/sign-out")
+    public String logout(HttpSession session) {
+        session.removeAttribute("user");
+        return "redirect:/";
     }
 }

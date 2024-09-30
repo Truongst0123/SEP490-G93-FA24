@@ -1,6 +1,6 @@
-<hr>
+<!-- footer.jsp -->
 <footer>
-  <p>Footer content &copy; 2024</p>
+  <p>&copy; 2024 My Website. All rights reserved.</p>
 </footer>
 </body>
 </html>
