@@ -4,6 +4,7 @@
   <title>Login</title>
 </head>
 <body>
+<%@ include file="/WEB-INF/views/header.jspf" %>
 <h2>Login</h2>
 <form action="login" method="post">
   <label for="username">Username:</label>
