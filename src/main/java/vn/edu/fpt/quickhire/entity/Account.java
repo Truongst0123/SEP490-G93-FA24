@@ -11,6 +11,7 @@ import java.util.Date;
 public class Account {
     @Id
     @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     // Mapping thông tin biến với tên cột trong Database
