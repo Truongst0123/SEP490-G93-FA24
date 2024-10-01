@@ -31,7 +31,7 @@ CREATE TABLE `account` (
   `account_type` int DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `account` (
 
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
-INSERT INTO `account` VALUES (1,'admin','admin','thanhnvhe@fpt.edu.vn','2000-08-10 00:00:00.000000',1,'Nguyen Van Thanh'),(2,'sad',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `account` VALUES (1,'admin','admin','thanhnvhe@fpt.edu.vn','2000-08-10 00:00:00.000000',1,'Nguyen Van Thanh'),(4,'thanhrecruiter','thanh','thanhnv@gmail.com','2024-10-11 00:00:00.000000',2,'Nguyen Van Thanh'),(8,'thanhcandidate','thanh','thanhnv111@gmail.com','2024-10-03 00:00:00.000000',3,'Nguyen Van Thanh 2');
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,10 +52,9 @@ DROP TABLE IF EXISTS `candidate`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `candidate` (
-  `account_id` int NOT NULL,
-  `biography` varchar(2000) DEFAULT NULL,
-  `candidatecol` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`account_id`)
+  `id` bigint NOT NULL,
+  `biography` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -65,6 +64,7 @@ CREATE TABLE `candidate` (
 
 LOCK TABLES `candidate` WRITE;
 /*!40000 ALTER TABLE `candidate` DISABLE KEYS */;
+INSERT INTO `candidate` VALUES (8,'Là nv số 2 VN');
 /*!40000 ALTER TABLE `candidate` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,9 +158,9 @@ DROP TABLE IF EXISTS `recruiter`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `recruiter` (
-  `id` int NOT NULL,
-  `company_description` varchar(2000) DEFAULT NULL,
-  `company scale` varchar(45) DEFAULT NULL,
+  `id` bigint NOT NULL,
+  `company_description` varchar(255) DEFAULT NULL,
+  `company_scale` int DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -171,6 +171,7 @@ CREATE TABLE `recruiter` (
 
 LOCK TABLES `recruiter` WRITE;
 /*!40000 ALTER TABLE `recruiter` DISABLE KEYS */;
+INSERT INTO `recruiter` VALUES (4,'Là công ty số 1 VN',200);
 /*!40000 ALTER TABLE `recruiter` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -183,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-30 20:13:26
+-- Dump completed on 2024-10-01 21:29:03
