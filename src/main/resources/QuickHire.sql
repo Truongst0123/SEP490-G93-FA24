@@ -122,6 +122,35 @@ LOCK TABLES `experience` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `handbook`
+--
+
+DROP TABLE IF EXISTS `handbook`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `handbook` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `imageUrl` varchar(255) DEFAULT NULL,
+  `createdAt` date DEFAULT NULL,
+  `created_at` datetime(6) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `handbook`
+--
+
+LOCK TABLES `handbook` WRITE;
+/*!40000 ALTER TABLE `handbook` DISABLE KEYS */;
+INSERT INTO `handbook` VALUES (1,'dawd','awdawd',NULL,NULL,NULL,'/uploads/c85765dd-6c56-400b-976a-062520db0a87_Screenshot 2024-08-20 000120.png'),(2,'Handbook2','Đây\r\nlà \r\n\r\ncontent\r\ncủa \r\nhand\r\n\r\nbook',NULL,NULL,NULL,'/uploads/2b9aa758-ebeb-4828-b1f6-9378ae6b1237_Screenshot 2024-07-22 012235.png');
+/*!40000 ALTER TABLE `handbook` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `job`
 --
 
@@ -184,4 +213,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-01 21:29:03
+-- Dump completed on 2024-10-02 21:09:28
